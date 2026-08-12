@@ -1,0 +1,17 @@
+.env
+.env.local
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+parsed_files/
+*.zip
+
+data/knowledge/*
+!data/knowledge/.gitkeep
+!data/knowledge/README.md
+
+volumes/
+web/node_modules/
+web/.next/
+web/out/
