@@ -10,6 +10,7 @@ parsed_files/
 data/knowledge/*
 !data/knowledge/.gitkeep
 !data/knowledge/README.md
+!data/knowledge/README.en.md
 
 volumes/
 web/node_modules/
