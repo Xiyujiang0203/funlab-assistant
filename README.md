@@ -1,7 +1,5 @@
 # Funlab Intelligent Q&A Assistant
 
-[中文](README.zh.md)
-
 Agent + RAG assistant for the Funlab lab private knowledge base, built on `langchain==1.2.x`.
 
 Place lab documents in `data/knowledge/`, ingest them, then chat in Chinese via the **Next.js UI** (or optional Gradio).
