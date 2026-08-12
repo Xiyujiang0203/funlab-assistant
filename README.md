@@ -2,7 +2,7 @@
 
 Agent + RAG assistant for the Funlab lab private knowledge base, built on `langchain==1.2.x`.
 
-Place lab documents in `data/knowledge/`, ingest them, then chat in Chinese via the **Next.js UI** (or optional Gradio).
+Place lab documents in `data/knowledge/`, ingest them, then chat via the **Next.js UI**.
 
 ---
 
@@ -13,7 +13,6 @@ Place lab documents in `data/knowledge/`, ingest them, then chat in Chinese via 
 - Agent: answers via `search_funlab_knowledge` tool
 - Web chat: Next.js frontend + FastAPI SSE streaming; reasoning steps shown above the reply
 - Short-term memory: `InMemorySaver` + `SummarizationMiddleware`
-- Optional: Gradio UI (`main.py`)
 - Optional: MinerU API for complex PDF/PPT (`MINERU_API_TOKEN`)
 - Optional: LangSmith tracing
 
@@ -26,7 +25,6 @@ funlab-assistant/
 ├── .env                              # API keys (not committed)
 ├── .env.example                      # Config template
 ├── run_api.py                        # FastAPI server (8001)
-├── main.py                           # Gradio server (7860, optional)
 ├── requirements-extra.txt
 ├── milvus-standalone-docker-compose.yml
 ├── app/
@@ -37,8 +35,7 @@ funlab-assistant/
 │   ├── vectorstore.py                # Milvus
 │   ├── embeddings.py                 # SiliconFlow BGE-M3
 │   ├── loaders.py                    # Document loaders
-│   ├── ingest_service.py             # Ingestion logic
-│   └── ui.py                         # Gradio UI (optional)
+│   └── ingest_service.py             # Ingestion logic
 ├── web/                              # Next.js frontend
 ├── scripts/
 │   ├── ingest.py                     # Ingest CLI
@@ -104,14 +101,6 @@ npm run dev
 ```
 
 Open: **http://localhost:3000**
-
-### Optional: Gradio
-
-```powershell
-python main.py
-```
-
-Open: **http://127.0.0.1:7860**
 
 ---
 

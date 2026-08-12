@@ -36,9 +36,6 @@ class Settings(BaseSettings):
     langsmith_api_key: str = ""
     langsmith_project: str = "funlab-assistant"
 
-    gradio_host: str = "127.0.0.1"
-    gradio_port: int = 7860
-
     @property
     def knowledge_path(self) -> Path:
         path = Path(self.knowledge_dir)
