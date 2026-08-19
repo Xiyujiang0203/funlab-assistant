@@ -20,6 +20,13 @@ FUNLAB_SYSTEM_PROMPT = """你是 Funlab 实验室智能问答助手。
 
 def _init_llm():
     settings = get_settings()
+    if settings.siliconflow_api_key:
+        return init_chat_model(
+            model=settings.llm_model or "deepseek-ai/DeepSeek-V3",
+            model_provider="openai",
+            api_key=settings.siliconflow_api_key,
+            base_url=settings.siliconflow_base_url,
+        )
     if settings.closeai_api_key:
         return init_chat_model(
             model=settings.llm_model,
@@ -34,7 +41,7 @@ def _init_llm():
             api_key=settings.deepseek_api_key,
             base_url=settings.deepseek_base_url,
         )
-    raise RuntimeError("请在 .env 中配置 CLOSEAI_API_KEY 或 DEEPSEEK_API_KEY")
+    raise RuntimeError("请在 .env 中配置 SILICONFLOW_API_KEY、CLOSEAI_API_KEY 或 DEEPSEEK_API_KEY")
 
 
 def _extract_ai_text(result: dict) -> str:

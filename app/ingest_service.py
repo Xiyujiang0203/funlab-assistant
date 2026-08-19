@@ -3,6 +3,7 @@ from pathlib import Path
 from app.embeddings import get_embed_model
 from app.loaders import load_file, load_knowledge_dir
 from app.splitter import get_text_splitter
+from app.text_clean import clean_rag_text
 from app.vectorstore import VectorStore
 
 
@@ -14,6 +15,13 @@ def ingest(rebuild: bool = False, file_paths: list[Path] | None = None) -> int:
     else:
         documents = load_knowledge_dir()
 
+    if not documents:
+        return 0
+
+    for doc in documents:
+        doc.page_content = clean_rag_text(doc.page_content)
+
+    documents = [doc for doc in documents if doc.page_content]
     if not documents:
         return 0
 
