@@ -38,3 +38,5 @@ test/1pdf2markdown/1.3ocr/*.md
 web/node_modules/
 web/.next/
 web/out/
+
+RAG.md
