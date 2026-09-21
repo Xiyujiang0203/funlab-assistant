@@ -1,5 +1,6 @@
 .env
 .env.local
+.env.*.local
 __pycache__/
 *.pyc
 .pytest_cache/
@@ -7,12 +8,33 @@ __pycache__/
 parsed_files/
 *.zip
 
+# knowledge & vector store (local only)
 data/knowledge/*
 !data/knowledge/.gitkeep
 !data/knowledge/README.md
 !data/knowledge/README.en.md
+data/qdrant/
 
+# local / bulky artifacts
 volumes/
+output/
+open-source/
+*.pdf
+test.py
+
+# test pipeline dumps (keep scripts, drop data)
+test/**/qdrant_data/
+test/**/output/
+test/**/*_images/
+test/**/*.pdf
+test/**/*.jsonl
+!test/7valuation/eval_set.jsonl
+test/**/*.embeddings.*
+test/1pdf2markdown/1.1markdown/
+test/1pdf2markdown/1.2cleaned/
+test/1pdf2markdown/1.3ocr/*.md
+!test/1pdf2markdown/1.3ocr/*.py
+
 web/node_modules/
 web/.next/
 web/out/

@@ -13,32 +13,38 @@ class Settings(BaseSettings):
         extra="ignore",
     )
 
-    llm_model: str = "gpt-4o-mini"
-    llm_provider: str = "openai"
-    closeai_api_key: str = ""
-    closeai_base_url: str = "https://api.openai-proxy.org/v1"
     deepseek_api_key: str = ""
     deepseek_base_url: str = "https://api.deepseek.com"
+    deepseek_model: str = "deepseek-flash"
 
-    siliconflow_api_key: str = ""
-    siliconflow_base_url: str = "https://api.siliconflow.cn/v1"
-    embed_model: str = "Pro/BAAI/bge-m3"
+    dashscope_api_key: str = ""
+    embed_model: str = "text-embedding-v4"
     embed_dim: int = 1024
+    rerank_model: str = "qwen3-rerank"
 
-    milvus_uri: str = "http://localhost:19530"
-    milvus_db: str = "funlab"
-    milvus_collection: str = "funlab_docs"
+    qdrant_path: str = "./data/qdrant"
+    qdrant_url: str = ""
+    qdrant_collection: str = "funlab_chunks"
 
     knowledge_dir: str = "./data/knowledge"
-    mineru_api_token: str = ""
-
-    langsmith_tracing: bool = False
-    langsmith_api_key: str = ""
-    langsmith_project: str = "funlab-assistant"
+    chunk_size: int = 800
+    chunk_overlap: int = 120
+    recall_top: int = 8
+    rerank_top: int = 5
+    rrf_pool: int = 20
+    context_window: int = 1
+    rag_enabled: bool = True
 
     @property
     def knowledge_path(self) -> Path:
         path = Path(self.knowledge_dir)
+        if not path.is_absolute():
+            path = PROJECT_ROOT / path
+        return path.resolve()
+
+    @property
+    def qdrant_store_path(self) -> Path:
+        path = Path(self.qdrant_path)
         if not path.is_absolute():
             path = PROJECT_ROOT / path
         return path.resolve()

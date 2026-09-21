@@ -1,0 +1,25 @@
+{"id": "gr-01", "query": "实验室考勤一周最少要打多少小时？", "doc": "GroupRules.md", "gold_chunk_ids": [15], "note": "附件1 周工时35小时"}
+{"id": "gr-02", "query": "有课的学生周工时怎么算？", "doc": "GroupRules.md", "gold_chunk_ids": [17], "note": "有课学生周工时=35-2*N"}
+{"id": "gr-03", "query": "考勤不达标会扣多少助研补贴？", "doc": "GroupRules.md", "gold_chunk_ids": [18], "note": "100*M 元"}
+{"id": "gr-04", "query": "实验室能不能玩电脑游戏？", "doc": "GroupRules.md", "gold_chunk_ids": [3], "note": "保持安静禁止游戏"}
+{"id": "gr-05", "query": "工位上可以放食品吗？可以吸烟吗？", "doc": "GroupRules.md", "gold_chunk_ids": [4], "note": "环境卫生"}
+{"id": "gr-06", "query": "外来人员能不能进实验室？", "doc": "GroupRules.md", "gold_chunk_ids": [5], "note": "维护秩序"}
+{"id": "gr-07", "query": "离开工位时充电线要怎么处理？", "doc": "GroupRules.md", "gold_chunk_ids": [6], "note": "实验室安全"}
+{"id": "gr-08", "query": "怎么请假？实验室请假单在哪里？", "doc": "GroupRules.md", "gold_chunk_ids": [2, 16, 35, 36], "note": "日常管理/附件10/请假单"}
+{"id": "gr-09", "query": "申请实习需要满足什么条件？", "doc": "GroupRules.md", "gold_chunk_ids": [9, 10], "note": "培养过程 实习条件"}
+{"id": "gr-10", "query": "中期考核要满足什么条件？", "doc": "GroupRules.md", "gold_chunk_ids": [9, 10], "note": "中期考核"}
+{"id": "gr-11", "query": "硕士和博士每月助研补贴分别是多少？", "doc": "GroupRules.md", "gold_chunk_ids": [14], "note": "学生福利"}
+{"id": "gr-12", "query": "实验室书籍怎么借阅？", "doc": "GroupRules.md", "gold_chunk_ids": [11], "note": "图书资料"}
+{"id": "gr-13", "query": "贵重设备使用要向谁申请？", "doc": "GroupRules.md", "gold_chunk_ids": [12], "note": "设备使用"}
+{"id": "gr-14", "query": "研究成果归属谁？离校要签什么协议？", "doc": "GroupRules.md", "gold_chunk_ids": [13], "note": "研究成果不扩散"}
+{"id": "gr-15", "query": "每周学术活动有什么要求？讲座每学期要参加几场？", "doc": "GroupRules.md", "gold_chunk_ids": [8], "note": "学术交流"}
+{"id": "sf-01", "query": "怎么用 ZeroTier 加入实验室虚拟局域网？网络 ID 是什么？", "doc": "FUNLAB Seafile使用指南-260807.md", "gold_chunk_ids": [4, 5], "note": "Join Network"}
+{"id": "sf-02", "query": "ZeroTier One 在哪里下载？", "doc": "FUNLAB Seafile使用指南-260807.md", "gold_chunk_ids": [3], "note": "安装 zerotier"}
+{"id": "sf-03", "query": "Seafile 云盘登录地址和初始密码是什么？", "doc": "FUNLAB Seafile使用指南-260807.md", "gold_chunk_ids": [7], "note": "登录账号"}
+{"id": "sf-04", "query": "Seafile 客户端在哪里下载？", "doc": "FUNLAB Seafile使用指南-260807.md", "gold_chunk_ids": [6], "note": "安装客户端"}
+{"id": "sf-05", "query": "SeaDrive 挂载盘怎么用？", "doc": "FUNLAB Seafile使用指南-260807.md", "gold_chunk_ids": [8], "note": "挂载盘"}
+{"id": "sf-06", "query": "网页端如何共享资料库给其他用户？", "doc": "FUNLAB Seafile使用指南-260807.md", "gold_chunk_ids": [11], "note": "资料库共享"}
+{"id": "sf-07", "query": "网页端如何上传下载文件？", "doc": "FUNLAB Seafile使用指南-260807.md", "gold_chunk_ids": [12], "note": "上传下载"}
+{"id": "sf-08", "query": "群组共享怎么新建群组？", "doc": "FUNLAB Seafile使用指南-260807.md", "gold_chunk_ids": [13], "note": "群组共享"}
+{"id": "sf-09", "query": "Web 端登录 Seafile 的网址是什么？", "doc": "FUNLAB Seafile使用指南-260807.md", "gold_chunk_ids": [9, 7], "note": "Web登录"}
+{"id": "sf-10", "query": "软件端和网页端功能有什么区别？", "doc": "FUNLAB Seafile使用指南-260807.md", "gold_chunk_ids": [14], "note": "软件端总述"}

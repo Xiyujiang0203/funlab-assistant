@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import React, { useState } from "react";
 import { useChat } from "./ChatContext";
 import { ChatProvider } from "./ChatContext";
@@ -16,6 +17,9 @@ function ChatInner() {
       <header className="chat-header">
         <div className="chat-header-inner">
           <h1 className="chat-title">Funlab 智能助手</h1>
+          <Link className="chat-rag-btn chat-admin-link" href="/admin">
+            管理端
+          </Link>
           <button type="button" className="chat-rag-btn" onClick={() => setRagOpen((v) => !v)}>
             RAG
           </button>

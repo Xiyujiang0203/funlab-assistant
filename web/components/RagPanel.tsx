@@ -52,7 +52,15 @@ export default function RagPanel({ open, onClose }: Props) {
 
   useEffect(() => {
     if (!open) return;
-    void refresh();
+    let alive = true;
+    void Promise.all([getRagConfig(), listDocuments()]).then(([cfg, docs]) => {
+      if (!alive) return;
+      setConfig(cfg);
+      setDocuments(docs.documents);
+    });
+    return () => {
+      alive = false;
+    };
   }, [open]);
 
   async function handleSave() {
